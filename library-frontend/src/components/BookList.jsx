@@ -72,12 +72,10 @@ const BookList = () => {
                 <form onSubmit={handleSubmit}>
                     <input
                         type="text"
-                        value={newTitle}
                         onChange={(e) => setNewTitle(e.target.value)}
                         placeholder="Enter book title"
                     />
                     <select
-                        value={newAuthorId}
                         onChange={(e) => setNewAuthorId(e.target.value)}>
                         {authors.map(author => (
                             <option key={author.id} value={author.id}>
@@ -86,7 +84,6 @@ const BookList = () => {
                         ))}
                     </select>
                     <select
-                        value={newCategoryId}
                         onChange={(e) => setNewCategoryId(e.target.value)}>
                         {categories.map(category => (
                             <option key={category.id} value={category.id}>

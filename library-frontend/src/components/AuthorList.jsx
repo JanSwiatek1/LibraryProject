@@ -4,8 +4,7 @@ import { getAuthors, addAuthor, deleteAuthor, editAuthor } from '../api/authorAp
 const AuthorList = () => {
     const [authors, setAuthors] = useState([]);
     const [newName, setNewName] = useState('');
-    const [editingId, setEditingId] = useState(null);
-
+    const [edits, setEdits] = useState({});
 
     const fetchData = async () => {
         const data = await getAuthors();
@@ -17,26 +16,50 @@ const AuthorList = () => {
         fetchData();
     }, []);
 
-    const handleDeleteAuthor = async (id) => {
-        // await fetch(`https://localhost:7141/Author/${id}`, {
-        //     method: 'DELETE',
-        // });
-        await deleteAuthor(id);
-        fetchData();
-    }
 
     const handleSubmit = async (event) => {
         event.preventDefault();
         if (newName.trim() === '') return;
-
-        if (editingId === null) {
-            await addAuthor(newName);
-        } else {
-            await editAuthor(editingId, newName);
-            setEditingId(null);
-        }
-
+        await addAuthor(newName);
         setNewName('');
+        fetchData();
+    };
+
+
+    const startEditing = (author) => {
+        setEdits(prev => ({
+            ...prev,
+            [author.id]: { name: author.name, isActive: author.isActive }
+        }));
+    };
+
+
+    const updateField = (id, field, value) => {
+        setEdits(prev => ({
+            ...prev,
+            [id]: { ...prev[id], [field]: value }
+        }));
+    };
+
+
+    const cancelEditing = (id) => {
+        setEdits(prev => {
+            const { [id]: _, ...rest } = prev;
+            return rest;
+        });
+    };
+
+
+    const saveAuthor = async (id) => {
+        const { name, isActive } = edits[id];
+        if (name.trim() === '') return;
+        await editAuthor(id, name, isActive);
+        cancelEditing(id);
+        fetchData();
+    };
+
+    const handleDeleteAuthor = async (id) => {
+        await deleteAuthor(id);
         fetchData();
     };
 
@@ -46,10 +69,29 @@ const AuthorList = () => {
                 <h2>Authors</h2>
                 <ul>
                     {authors.map(author => (
-                        <li key={author.id}>{author.name}
-
-                            <button onClick={() => { setEditingId(author.id); setNewName(author.name) }}>Edit</button>
-                            <button onClick={() => handleDeleteAuthor(author.id)}>Delete</button>
+                        <li key={author.id}>
+                            {author.id in edits ? (
+                                <>
+                                    <input
+                                        type="text"
+                                        value={edits[author.id].name}
+                                        onChange={(e) => updateField(author.id, 'name', e.target.value)}
+                                    />
+                                    <input
+                                        type="checkbox"
+                                        checked={edits[author.id].isActive}
+                                        onChange={(e) => updateField(author.id, 'isActive', e.target.checked)}
+                                    />
+                                    <button onClick={() => saveAuthor(author.id)}>Save</button>
+                                    <button onClick={() => cancelEditing(author.id)}>Cancel</button>
+                                </>
+                            ) : (
+                                <span>
+                                    {author.name} {author.isActive ? '✅' : '❌'}
+                                    <button onClick={() => startEditing(author)}>Edit</button>
+                                    <button onClick={() => handleDeleteAuthor(author.id)}>Delete</button>
+                                </span>
+                            )}
                         </li>
                     ))}
                 </ul>
@@ -63,15 +105,11 @@ const AuthorList = () => {
                         onChange={(e) => setNewName(e.target.value)}
                         placeholder="Enter author name"
                     />
-                    <button type="submit">{editingId === null ? 'Add Author' : 'Save Changes'}</button>
+                    <button type="submit">Add Author</button>
                 </form>
             </div>
-
         </div>
     );
 };
 
 export default AuthorList;
-
-
-

@@ -40,7 +40,8 @@ namespace LibraryAPI.Controllers
         {
             var author = new Author()
             {
-                Name = dto.Name
+                Name = dto.Name,
+                IsActive = dto.IsActive
             };
             _context.Authors.Add(author);
             await _context.SaveChangesAsync();
@@ -70,6 +71,7 @@ namespace LibraryAPI.Controllers
             }
 
             author.Name = dto.Name;
+            author.IsActive = dto.IsActive;
             await _context.SaveChangesAsync();
 
             return NoContent(); 

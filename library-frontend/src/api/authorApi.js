@@ -18,7 +18,7 @@ export const deleteAuthor = async (id) => {
     return response.data;
 };
 
-export const editAuthor = async (id, name) => {
-    const response = await axios.put(`${API_URL}/${id}`, { name });
+export const editAuthor = async (id, name, isActive) => {
+    const response = await axios.put(`${API_URL}/${id}`, { name, isActive });
     return response.data;
 };

@@ -434,6 +434,9 @@
           "name": {
             "minLength": 1,
             "type": "string"
+          },
+          "isActive": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false

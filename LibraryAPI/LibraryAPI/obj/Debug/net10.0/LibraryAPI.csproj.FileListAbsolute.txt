@@ -322,3 +322,4 @@ D:\NaukaIT\CSharp\Ropos\LibraryProject\LibraryAPI\LibraryAPI\obj\Debug\net10.0\r
 D:\NaukaIT\CSharp\Ropos\LibraryProject\LibraryAPI\LibraryAPI\obj\Debug\net10.0\LibraryAPI.pdb
 D:\NaukaIT\CSharp\Ropos\LibraryProject\LibraryAPI\LibraryAPI\obj\Debug\net10.0\LibraryAPI.genruntimeconfig.cache
 D:\NaukaIT\CSharp\Ropos\LibraryProject\LibraryAPI\LibraryAPI\obj\Debug\net10.0\ref\LibraryAPI.dll
+D:\NaukaIT\CSharp\Ropos\LibraryProject\LibraryAPI\LibraryAPI\obj\Debug\net10.0\LibraryAPI.sourcelink.json
