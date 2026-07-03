@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { getAuthors, addAuthor, deleteAuthor, editAuthor } from '../api/authorApi';
+import { getAuthors, addAuthor, deleteAuthor, editAuthor, editAuthors } from '../api/authorApi';
 
 const AuthorList = () => {
     const [authors, setAuthors] = useState([]);
@@ -63,6 +63,13 @@ const AuthorList = () => {
         fetchData();
     };
 
+    const saveAll = async () => {
+        const authorsToUpdate = Object.entries(edits).map(([id, { name, isActive }]) => ({ id: parseInt(id), name, isActive }));
+        await editAuthors(authorsToUpdate);
+        setEdits({});
+        fetchData();
+    };
+
     return (
         <div>
             <div>
@@ -120,6 +127,14 @@ const AuthorList = () => {
                     />
                     <button type="submit">Add Author</button>
                 </form>
+            </div>
+            <div>
+                <h2>Edit Authors</h2>
+                {Object.keys(edits).length === 0 ? (
+                    <p>No authors to edit.</p>
+                ) : (
+                    <button onClick={saveAll}>Zapisz wszystko</button>
+                )}
             </div>
         </div>
     );

@@ -7,8 +7,16 @@
       "RelativeMoniker": "D:0:0:{8AE79801-3817-F19D-9539-72EAE078E0E4}|LibraryAPI\\LibraryAPI.csproj|solutionrelative:libraryapi\\controllers\\authorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{8AE79801-3817-F19D-9539-72EAE078E0E4}|LibraryAPI\\LibraryAPI.csproj|d:\\naukait\\csharp\\ropos\\libraryproject\\libraryapi\\libraryapi\\dto\\authorbulkupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8AE79801-3817-F19D-9539-72EAE078E0E4}|LibraryAPI\\LibraryAPI.csproj|solutionrelative:libraryapi\\dto\\authorbulkupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{8AE79801-3817-F19D-9539-72EAE078E0E4}|LibraryAPI\\LibraryAPI.csproj|d:\\naukait\\csharp\\ropos\\libraryproject\\libraryapi\\libraryapi\\dto\\authordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8AE79801-3817-F19D-9539-72EAE078E0E4}|LibraryAPI\\LibraryAPI.csproj|solutionrelative:libraryapi\\dto\\authordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8AE79801-3817-F19D-9539-72EAE078E0E4}|LibraryAPI\\LibraryAPI.csproj|d:\\naukait\\csharp\\ropos\\libraryproject\\libraryapi\\libraryapi\\dto\\bookresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8AE79801-3817-F19D-9539-72EAE078E0E4}|LibraryAPI\\LibraryAPI.csproj|solutionrelative:libraryapi\\dto\\bookresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8AE79801-3817-F19D-9539-72EAE078E0E4}|LibraryAPI\\LibraryAPI.csproj|d:\\naukait\\csharp\\ropos\\libraryproject\\libraryapi\\libraryapi\\entities\\author.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -17,10 +25,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{8AE79801-3817-F19D-9539-72EAE078E0E4}|LibraryAPI\\LibraryAPI.csproj|d:\\naukait\\csharp\\ropos\\libraryproject\\libraryapi\\libraryapi\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8AE79801-3817-F19D-9539-72EAE078E0E4}|LibraryAPI\\LibraryAPI.csproj|solutionrelative:libraryapi\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8AE79801-3817-F19D-9539-72EAE078E0E4}|LibraryAPI\\LibraryAPI.csproj|d:\\naukait\\csharp\\ropos\\libraryproject\\libraryapi\\libraryapi\\dto\\bookresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8AE79801-3817-F19D-9539-72EAE078E0E4}|LibraryAPI\\LibraryAPI.csproj|solutionrelative:libraryapi\\dto\\bookresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8AE79801-3817-F19D-9539-72EAE078E0E4}|LibraryAPI\\LibraryAPI.csproj|d:\\naukait\\csharp\\ropos\\libraryproject\\libraryapi\\libraryapi\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -42,11 +46,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
+              "Title": "AuthorBulkUpdateDTO.cs",
+              "DocumentMoniker": "D:\\NaukaIT\\CSharp\\Ropos\\LibraryProject\\LibraryAPI\\LibraryAPI\\DTO\\AuthorBulkUpdateDTO.cs",
+              "RelativeDocumentMoniker": "LibraryAPI\\DTO\\AuthorBulkUpdateDTO.cs",
+              "ToolTip": "D:\\NaukaIT\\CSharp\\Ropos\\LibraryProject\\LibraryAPI\\LibraryAPI\\DTO\\AuthorBulkUpdateDTO.cs",
+              "RelativeToolTip": "LibraryAPI\\DTO\\AuthorBulkUpdateDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-03T20:43:30.177Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "BookResponseDTO.cs",
               "DocumentMoniker": "D:\\NaukaIT\\CSharp\\Ropos\\LibraryProject\\LibraryAPI\\LibraryAPI\\DTO\\BookResponseDTO.cs",
               "RelativeDocumentMoniker": "LibraryAPI\\DTO\\BookResponseDTO.cs",
@@ -54,7 +71,8 @@
               "RelativeToolTip": "LibraryAPI\\DTO\\BookResponseDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-29T12:09:03.583Z"
+              "WhenOpened": "2026-06-29T12:09:03.583Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -64,14 +82,14 @@
               "RelativeDocumentMoniker": "LibraryAPI\\Controllers\\AuthorController.cs",
               "ToolTip": "D:\\NaukaIT\\CSharp\\Ropos\\LibraryProject\\LibraryAPI\\LibraryAPI\\Controllers\\AuthorController.cs",
               "RelativeToolTip": "LibraryAPI\\Controllers\\AuthorController.cs",
-              "ViewState": "AgIAADoAAAAAAAAAAAAswEYAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAADcAAAAAAAAAAAAswEYAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-29T09:48:51.187Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Author.cs",
               "DocumentMoniker": "D:\\NaukaIT\\CSharp\\Ropos\\LibraryProject\\LibraryAPI\\LibraryAPI\\Entities\\Author.cs",
               "RelativeDocumentMoniker": "LibraryAPI\\Entities\\Author.cs",
@@ -83,7 +101,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "CategoryController.cs",
               "DocumentMoniker": "D:\\NaukaIT\\CSharp\\Ropos\\LibraryProject\\LibraryAPI\\LibraryAPI\\Controllers\\CategoryController.cs",
               "RelativeDocumentMoniker": "LibraryAPI\\Controllers\\CategoryController.cs",
@@ -95,7 +113,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "AuthorDTO.cs",
               "DocumentMoniker": "D:\\NaukaIT\\CSharp\\Ropos\\LibraryProject\\LibraryAPI\\LibraryAPI\\DTO\\AuthorDTO.cs",
               "RelativeDocumentMoniker": "LibraryAPI\\DTO\\AuthorDTO.cs",
@@ -103,11 +121,12 @@
               "RelativeToolTip": "LibraryAPI\\DTO\\AuthorDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-01T08:34:56.396Z"
+              "WhenOpened": "2026-07-01T08:34:56.396Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "BookController.cs",
               "DocumentMoniker": "D:\\NaukaIT\\CSharp\\Ropos\\LibraryProject\\LibraryAPI\\LibraryAPI\\Controllers\\BookController.cs",
               "RelativeDocumentMoniker": "LibraryAPI\\Controllers\\BookController.cs",
@@ -119,7 +138,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "launchSettings.json",
               "DocumentMoniker": "D:\\NaukaIT\\CSharp\\Ropos\\LibraryProject\\LibraryAPI\\LibraryAPI\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "LibraryAPI\\Properties\\launchSettings.json",
@@ -131,7 +150,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\NaukaIT\\CSharp\\Ropos\\LibraryProject\\LibraryAPI\\LibraryAPI\\appsettings.json",
               "RelativeDocumentMoniker": "LibraryAPI\\appsettings.json",

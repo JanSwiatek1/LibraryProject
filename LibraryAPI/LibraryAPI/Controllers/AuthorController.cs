@@ -76,5 +76,18 @@ namespace LibraryAPI.Controllers
 
             return NoContent(); 
         }
+        [HttpPut]
+        public async Task<IActionResult> PutMany([FromBody] List<AuthorBulkUpdateDTO> dtos)
+        {
+            foreach (var dto in dtos)
+            {
+                var author = await _context.Authors.FindAsync(dto.Id);
+                if (author == null) return NotFound($"Author with id {dto.Id} not found.");
+                author.Name = dto.Name;
+                author.IsActive = dto.IsActive;
+            }
+            await _context.SaveChangesAsync();
+            return NoContent();
+        }
     }
 }

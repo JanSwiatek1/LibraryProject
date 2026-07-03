@@ -22,3 +22,7 @@ export const editAuthor = async (id, name, isActive) => {
     const response = await axios.put(`${API_URL}/${id}`, { name, isActive });
     return response.data;
 };
+export const editAuthors = async (authors) => {
+    const response = await axios.put(API_URL, authors);
+    return response.data;
+};

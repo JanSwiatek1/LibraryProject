@@ -28,6 +28,22 @@
   },
   {
     "ContainingType": "LibraryAPI.Controllers.AuthorController",
+    "Method": "PutMany",
+    "RelativePath": "Author",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dtos",
+        "Type": "System.Collections.Generic.List\u00601[[LibraryAPI.DTO.AuthorBulkUpdateDTO, LibraryAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LibraryAPI.Controllers.AuthorController",
     "Method": "GetAuthor",
     "RelativePath": "Author/{id}",
     "HttpMethod": "GET",
