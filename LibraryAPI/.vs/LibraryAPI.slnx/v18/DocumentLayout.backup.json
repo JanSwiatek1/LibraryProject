@@ -42,19 +42,31 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AuthorDTO.cs",
-              "DocumentMoniker": "D:\\NaukaIT\\CSharp\\Ropos\\LibraryProject\\LibraryAPI\\LibraryAPI\\DTO\\AuthorDTO.cs",
-              "RelativeDocumentMoniker": "LibraryAPI\\DTO\\AuthorDTO.cs",
-              "ToolTip": "D:\\NaukaIT\\CSharp\\Ropos\\LibraryProject\\LibraryAPI\\LibraryAPI\\DTO\\AuthorDTO.cs",
-              "RelativeToolTip": "LibraryAPI\\DTO\\AuthorDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "BookResponseDTO.cs",
+              "DocumentMoniker": "D:\\NaukaIT\\CSharp\\Ropos\\LibraryProject\\LibraryAPI\\LibraryAPI\\DTO\\BookResponseDTO.cs",
+              "RelativeDocumentMoniker": "LibraryAPI\\DTO\\BookResponseDTO.cs",
+              "ToolTip": "D:\\NaukaIT\\CSharp\\Ropos\\LibraryProject\\LibraryAPI\\LibraryAPI\\DTO\\BookResponseDTO.cs",
+              "RelativeToolTip": "LibraryAPI\\DTO\\BookResponseDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-01T08:34:56.396Z",
+              "WhenOpened": "2026-06-29T12:09:03.583Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AuthorController.cs",
+              "DocumentMoniker": "D:\\NaukaIT\\CSharp\\Ropos\\LibraryProject\\LibraryAPI\\LibraryAPI\\Controllers\\AuthorController.cs",
+              "RelativeDocumentMoniker": "LibraryAPI\\Controllers\\AuthorController.cs",
+              "ToolTip": "D:\\NaukaIT\\CSharp\\Ropos\\LibraryProject\\LibraryAPI\\LibraryAPI\\Controllers\\AuthorController.cs",
+              "RelativeToolTip": "LibraryAPI\\Controllers\\AuthorController.cs",
+              "ViewState": "AgIAADoAAAAAAAAAAAAswEYAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-29T09:48:51.187Z",
               "EditorCaption": ""
             },
             {
@@ -71,18 +83,6 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "BookResponseDTO.cs",
-              "DocumentMoniker": "D:\\NaukaIT\\CSharp\\Ropos\\LibraryProject\\LibraryAPI\\LibraryAPI\\DTO\\BookResponseDTO.cs",
-              "RelativeDocumentMoniker": "LibraryAPI\\DTO\\BookResponseDTO.cs",
-              "ToolTip": "D:\\NaukaIT\\CSharp\\Ropos\\LibraryProject\\LibraryAPI\\LibraryAPI\\DTO\\BookResponseDTO.cs",
-              "RelativeToolTip": "LibraryAPI\\DTO\\BookResponseDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-29T12:09:03.583Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 5,
               "Title": "CategoryController.cs",
               "DocumentMoniker": "D:\\NaukaIT\\CSharp\\Ropos\\LibraryProject\\LibraryAPI\\LibraryAPI\\Controllers\\CategoryController.cs",
@@ -95,16 +95,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AuthorController.cs",
-              "DocumentMoniker": "D:\\NaukaIT\\CSharp\\Ropos\\LibraryProject\\LibraryAPI\\LibraryAPI\\Controllers\\AuthorController.cs",
-              "RelativeDocumentMoniker": "LibraryAPI\\Controllers\\AuthorController.cs",
-              "ToolTip": "D:\\NaukaIT\\CSharp\\Ropos\\LibraryProject\\LibraryAPI\\LibraryAPI\\Controllers\\AuthorController.cs",
-              "RelativeToolTip": "LibraryAPI\\Controllers\\AuthorController.cs",
-              "ViewState": "AgIAADoAAAAAAAAAAAAswEQAAAANAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "AuthorDTO.cs",
+              "DocumentMoniker": "D:\\NaukaIT\\CSharp\\Ropos\\LibraryProject\\LibraryAPI\\LibraryAPI\\DTO\\AuthorDTO.cs",
+              "RelativeDocumentMoniker": "LibraryAPI\\DTO\\AuthorDTO.cs",
+              "ToolTip": "D:\\NaukaIT\\CSharp\\Ropos\\LibraryProject\\LibraryAPI\\LibraryAPI\\DTO\\AuthorDTO.cs",
+              "RelativeToolTip": "LibraryAPI\\DTO\\AuthorDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-29T09:48:51.187Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-01T08:34:56.396Z"
             },
             {
               "$type": "Document",

@@ -265,8 +265,80 @@
 }
 
 .section-card button+button:hover {
-  background: rgb(173, 221, 27);
+  background: rgba(46, 125, 50, 0.18);
   color: #071807;
+}
+
+.list-item {
+  padding: 0;
+  background: transparent;
+  border: none;
+}
+
+.list-display,
+.list-edit-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+}
+
+.list-main {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  justify-content: space-between;
+}
+
+.item-name {
+  font-weight: 600;
+  color: black;
+}
+
+.author-status {
+  padding: 5px 10px;
+  border-radius: 999px;
+  font-size: 0.84rem;
+  background: rgba(46, 125, 50, 0.12);
+  color: var(--accent);
+}
+
+.author-status.active {
+  background: rgb(1, 244, 14);
+  color: black;
+}
+
+.author-status.inactive {
+  background: rgba(217, 241, 34, 0.392);
+  color: black;
+}
+
+.list-input {
+  flex: 1;
+}
+
+.author-checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: #fbfff8;
+  white-space: nowrap;
+}
+
+.author-checkbox-row input {
+  width: auto;
+  margin: 0;
+  accent-color: var(--accent);
+}
+
+.action-group {
+  display: flex;
+  gap: 8px;
 }
 
 @media (max-width: 720px) {
@@ -278,4 +350,63 @@
   .section-card button {
     width: 100%;
   }
+
+  .list-display,
+  .list-edit-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .list-main {
+    justify-content: space-between;
+  }
+
+  .action-group {
+    width: 100%;
+  }
+}
+
+.category-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-items: center;
+  gap: 6px;
+  flex: 1;
+}
+
+.category-name {
+  font-weight: 700;
+  color: black;
+}
+
+.category-description {
+  color: #4b5563;
+  font-size: 0.95rem;
+  max-width: 35ch;
+  max-height: max-content;
+  white-space: normal;
+}
+
+.book-content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
+
+.book-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.book-meta {
+  color: #4b5563;
+  font-size: 0.95rem;
+}
+
+.category-input {
+  flex: 1;
 }

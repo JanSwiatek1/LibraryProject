@@ -13,6 +13,8 @@ const BookList = () => {
     const [authors, setAuthors] = useState([]);
     const [categories, setCategories] = useState([]);
 
+    const [edits, setEdits] = useState({});
+
 
 
     const fetchData = async () => {
@@ -52,17 +54,90 @@ const BookList = () => {
         fetchData();
     };
 
+    const startEditing = (bookId) => {
+        const book = books.find(b => b.id === bookId);
+        setEdits(prev => ({
+            ...prev,
+            [bookId]: { title: book.title, authorId: book.authorId, categoryId: book.categoryId }
+        }));
+    };
+    const updateField = (id, field, value) => {
+        setEdits(prev => ({
+            ...prev,
+            [id]: { ...prev[id], [field]: value }
+        }));
+    };
+    const cancelEditing = (id) => {
+        setEdits(prev => {
+            const { [id]: _, ...rest } = prev;
+            return rest;
+        });
+    };
+
+    const saveBook = async (id) => {
+        const { title, authorId, categoryId } = edits[id];
+        if (title.trim() === '') return;
+        await editBook(id, title, authorId, categoryId);
+        cancelEditing(id);
+        fetchData();
+    };
+
     return (
         <div>
             <div>
                 <h2>Books</h2>
                 <ul>
                     {books.map(book => (
-                        <li key={book.id}>{book.title} - {book.authorName} - {book.categoryName}
+                        <li key={book.id} className="list-item">
+                            {book.id in edits ? (
+                                <div className="list-edit-row">
+                                    <div className="list-main book-content">
+                                        <input
+                                            className="list-input"
+                                            type="text"
+                                            value={edits[book.id].title}
+                                            onChange={(e) => updateField(book.id, 'title', e.target.value)}
+                                        />
+                                        <select
+                                            value={edits[book.id].authorId}
+                                            onChange={(e) => updateField(book.id, 'authorId', e.target.value)}
+                                        >
+                                            {authors.map(author => (
+                                                <option key={author.id} value={author.id}>
+                                                    {author.name}
+                                                </option>
+                                            ))}
+                                        </select>
+                                        <select
+                                            value={edits[book.id].categoryId}
+                                            onChange={(e) => updateField(book.id, 'categoryId', e.target.value)}
+                                        >
+                                            {categories.map(category => (
+                                                <option key={category.id} value={category.id}>
+                                                    {category.name}
+                                                </option>
+                                            ))}
+                                        </select>
+                                    </div>
+                                    <div className="action-group">
+                                        <button onClick={() => saveBook(book.id)}>Save</button>
+                                        <button onClick={() => cancelEditing(book.id)}>Cancel</button>
+                                    </div>
+                                </div>
+                            ) : (
+                                <div className="list-display">
+                                    <div className="list-main book-content">
 
+                                        <span className="item-name">{book.title}</span>
+                                        <span className="book-meta">{book.authorName} • {book.categoryName}</span>
+                                    </div>
+                                    <div className="action-group">
+                                        <button onClick={() => startEditing(book.id)}>Edit</button>
+                                        <button onClick={() => handleDeleteBook(book.id)}>Delete</button>
+                                    </div>
 
-                            <button onClick={() => { setEditingId(book.id); setNewTitle(book.title); setNewAuthorId(book.authorId); setNewCategoryId(book.categoryId) }}>Edit</button>
-                            <button onClick={() => handleDeleteBook(book.id)}>Delete</button>
+                                </div>
+                            )}
                         </li>
                     ))}
                 </ul>
@@ -91,7 +166,7 @@ const BookList = () => {
                             </option>
                         ))}
                     </select>
-                    <button type="submit">{editingId === null ? 'Add Book' : 'Save Changes'}</button>
+                    <button type="submit">Add Book</button>
                 </form>
             </div>
 

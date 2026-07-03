@@ -69,28 +69,41 @@ const AuthorList = () => {
                 <h2>Authors</h2>
                 <ul>
                     {authors.map(author => (
-                        <li key={author.id}>
+                        <li key={author.id} className="list-item">
                             {author.id in edits ? (
-                                <>
+                                <div className="list-edit-row">
                                     <input
+                                        className="list-input"
                                         type="text"
                                         value={edits[author.id].name}
                                         onChange={(e) => updateField(author.id, 'name', e.target.value)}
                                     />
-                                    <input
-                                        type="checkbox"
-                                        checked={edits[author.id].isActive}
-                                        onChange={(e) => updateField(author.id, 'isActive', e.target.checked)}
-                                    />
-                                    <button onClick={() => saveAuthor(author.id)}>Save</button>
-                                    <button onClick={() => cancelEditing(author.id)}>Cancel</button>
-                                </>
+                                    <label className="author-checkbox-row">
+                                        <input
+                                            type="checkbox"
+                                            checked={edits[author.id].isActive}
+                                            onChange={(e) => updateField(author.id, 'isActive', e.target.checked)}
+                                        />
+                                        <span>Active</span>
+                                    </label>
+                                    <div className="action-group">
+                                        <button onClick={() => saveAuthor(author.id)}>Save</button>
+                                        <button onClick={() => cancelEditing(author.id)}>Cancel</button>
+                                    </div>
+                                </div>
                             ) : (
-                                <span>
-                                    {author.name} {author.isActive ? '✅' : '❌'}
-                                    <button onClick={() => startEditing(author)}>Edit</button>
-                                    <button onClick={() => handleDeleteAuthor(author.id)}>Delete</button>
-                                </span>
+                                <div className="list-display">
+                                    <div className="list-main">
+                                        <span className="item-name">{author.name}</span>
+                                        <span className={`author-status ${author.isActive ? 'active' : 'inactive'}`}>
+                                            {author.isActive ? 'Active' : 'Inactive'}
+                                        </span>
+                                    </div>
+                                    <div className="action-group">
+                                        <button onClick={() => startEditing(author)}>Edit</button>
+                                        <button onClick={() => handleDeleteAuthor(author.id)}>Delete</button>
+                                    </div>
+                                </div>
                             )}
                         </li>
                     ))}
